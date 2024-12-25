@@ -1,0 +1,35 @@
+name: Publish to npm
+
+on:
+  push:
+    branches:
+      - main  # O la rama que prefieras
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Paso 1: Check out el código
+    - name: Check out code
+      uses: actions/checkout@v2
+
+    # Paso 2: Configurar Node.js
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'  # O la versión que necesites
+
+    # Paso 3: Instalar dependencias
+    - name: Install dependencies
+      run: npm install
+
+    # Paso 4: Realizar pruebas (si es necesario)
+    - name: Run tests
+      run: npm test  # Si tienes pruebas configuradas, de lo contrario omítelo
+
+    # Paso 5: Publicar en npm
+    - name: Publish to npm
+      run: npm publish
+      env:
+        NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}} 
