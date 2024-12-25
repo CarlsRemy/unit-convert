@@ -1,0 +1,6 @@
+test/
+doc/
+src/
+minify.js
+tsconfig.json
+node_modules/

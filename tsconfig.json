@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+
+		"target": "ES6",
+		"module": "CommonJS",
+   	"outDir": "./dist/",
+    "rootDir": "./src",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"],  
+      "@converters/*": ["src/converters/*"],
+    },
+    "rootDirs": [
+      "./src",
+      "./dist"
+    ],
+    "types": [
+      "node"
+    ], 
+    "sourceRoot": "./dist/",              
+    "allowImportingTsExtensions": true,
+    "rewriteRelativeImportExtensions": true,
+    "moduleResolution": "node",
+    "declaration": false,
+    "sourceMap": true,
+    "noEmit": false,    
+    "removeComments": false,
+    "importHelpers": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,   
+    "strict": true,
+    "skipLibCheck": true 
+  },
+  	"include": [
+		"src/**/*.ts",
+    "src/converters/*.ts",
+	],
+
+	"exclude": [
+		"node_modules",
+		"test/**/*.ts",
+	],
+}
