@@ -32,8 +32,7 @@
     "skipLibCheck": true 
   },
   	"include": [
-		"src/**/*.ts",
-    "src/converters/*.ts",
+		"src/**/*",
 	],
 
 	"exclude": [

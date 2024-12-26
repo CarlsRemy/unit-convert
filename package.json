@@ -1,13 +1,13 @@
 {
   "name": "unit-convert-intl",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Libreria que contiene un conjunto de herramientas para la conversion de unidades",
   "main": "dist/convert.min.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "ts-mocha test/*",
+    "test": "ts-mocha test/**/*.ts",
     "build": "tsc && node minify.js",
     "prepublish": "npm run build"
   },
@@ -21,7 +21,7 @@
     "url": "https://github.com/CarlsRemy/unit-convert/issues"
   },
   "homepage": "https://github.com/CarlsRemy/unit-convert#readme",
-  "dependencies": {
+  "devDependencies": {
     "@types/node": "^20.5.8",
     "chai": "^4.3.8",
     "mocha": "^10.2.0",
@@ -34,6 +34,8 @@
     "unit convert",
     "conversion de unidades",
     "conversion de medidas",
-    "Api Intl"
+    "Api Intl",
+    "unit-convert",
+    "units"
   ]
 }

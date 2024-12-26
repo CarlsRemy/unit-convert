@@ -1,7 +1,7 @@
 // test.ts
 const { assert } = require("chai");
 const { describe, it } = require("mocha");
-import { Inch,Centimeter, Meter, Kilometer, Mile, Yard, Foot } from '../src/convert';
+import { Inch,Centimeter, Meter, Kilometer, Mile, Yard, Foot } from '../dist/convert';
 
 describe('Meter', () => {
 	
