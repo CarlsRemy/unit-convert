@@ -19,6 +19,7 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: '16'  # O la versión que necesites
+        registry-url: 'https://registry.npmjs.org'
 
     # Paso 3: Instalar dependencias
     - name: Install dependencies
