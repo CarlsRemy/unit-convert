@@ -46,14 +46,16 @@ const _format = (value: number = 0, Unit = "", options: IOptions = {}) => {
 		return `${value} ${(unitDisplay == "long" && value == 1) ? Unit.substring(0, Unit.length -1) : Unit}`;
 	}
 
-	const _options: Intl.NumberFormatOptions = {
-		style: 'unit',
-		unit: Unit,
-		unitDisplay: unitDisplay
-	}
+	const _options: Intl.NumberFormatOptions = {}
 
-	if (Object( options).hasOwnProperty('maximumFractionDigits')) {
-		_options.maximumFractionDigits = options.maximumFractionDigits;
+	if (Unit !== "") {
+		_options.style = 'unit';
+		_options.unitDisplay = unitDisplay;
+	
+		if (Object( options).hasOwnProperty('maximumFractionDigits')) {
+			_options.maximumFractionDigits = options.maximumFractionDigits;
+		}
+		_options.unit = Unit;
 	}
 
 	if (Object( options).hasOwnProperty('minimumFractionDigits')) {

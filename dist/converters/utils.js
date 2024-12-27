@@ -33,13 +33,14 @@ const _format = (value = 0, Unit = "", options = {}) => {
         Unit = fortnight(locale, unitDisplay);
         return `${value} ${(unitDisplay == "long" && value == 1) ? Unit.substring(0, Unit.length - 1) : Unit}`;
     }
-    const _options = {
-        style: 'unit',
-        unit: Unit,
-        unitDisplay: unitDisplay
-    };
-    if (Object(options).hasOwnProperty('maximumFractionDigits')) {
-        _options.maximumFractionDigits = options.maximumFractionDigits;
+    const _options = {};
+    if (Unit !== "") {
+        _options.style = 'unit';
+        _options.unitDisplay = unitDisplay;
+        if (Object(options).hasOwnProperty('maximumFractionDigits')) {
+            _options.maximumFractionDigits = options.maximumFractionDigits;
+        }
+        _options.unit = Unit;
     }
     if (Object(options).hasOwnProperty('minimumFractionDigits')) {
         _options.minimumFractionDigits = options.minimumFractionDigits;

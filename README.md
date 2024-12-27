@@ -3,14 +3,19 @@ Libreria que contiene un conjunto de herramientas para la conversion de unidades
 
 Unit-Convert-Intl es una librería simple y eficiente que te permite realizar conversiones entre diversas unidades de medida. Con esta herramienta podrás convertir distancias entre unidades comunes como yardas, millas, kilómetros, centímetros e inches de manera sencilla y directa.
 
-## Versión 1.0.0
-La versión 1.0.0 de UnitConverter incluye funciones para realizar conversiones de distancia. Esta versión te permitirá convertir entre las siguientes unidades:
+## Versión 1.0.4
+La versión 1.0.4 incluye funciones para realizar conversiones de distancia. 
 
-- Yardas
-- Millas
-- Kilómetros
-- Centímetros
-- Pulgadas (Inches)
+## Versión 1.1.0
+La versión 1.1.0 incluye funciones para realizar conversiones de Masas a parte de las de conversion de Distancia de la versión posterior.
+- Kilogram 
+- Gram
+- Ton
+- Milligram
+- Microgram
+- Pound
+- Stone 
+- Ounce
 
 ### Instalación
  Para instalar la librería, usa npm:
@@ -19,7 +24,7 @@ La versión 1.0.0 de UnitConverter incluye funciones para realizar conversiones 
 npm install unit-convert-Intl
 ```
 ### Uso
-A continuación se muestra cómo usar las funciones de conversión disponibles en la versión 1.0.0:
+A continuación se muestra cómo usar las funciones de conversión:
 
 ```typescript
 import { Yard, Mile, Kilometer, Centimeter, Inch } from 'unit-converter-Intl';

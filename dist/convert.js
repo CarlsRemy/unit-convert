@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Foot = exports.Yard = exports.Mile = exports.Kilometer = exports.Meter = exports.Centimeter = exports.Inch = void 0;
+exports.Ounce = exports.Stone = exports.Pound = exports.Microgram = exports.Milligram = exports.Ton = exports.Gram = exports.Kilogram = exports.Foot = exports.Yard = exports.Mile = exports.Kilometer = exports.Meter = exports.Centimeter = exports.Inch = void 0;
 const distance_ts_1 = require("./converters/distance.js");
 Object.defineProperty(exports, "Inch", { enumerable: true, get: function () { return distance_ts_1.Inch; } });
 Object.defineProperty(exports, "Centimeter", { enumerable: true, get: function () { return distance_ts_1.Centimeter; } });
@@ -9,4 +9,13 @@ Object.defineProperty(exports, "Kilometer", { enumerable: true, get: function ()
 Object.defineProperty(exports, "Mile", { enumerable: true, get: function () { return distance_ts_1.Mile; } });
 Object.defineProperty(exports, "Yard", { enumerable: true, get: function () { return distance_ts_1.Yard; } });
 Object.defineProperty(exports, "Foot", { enumerable: true, get: function () { return distance_ts_1.Foot; } });
+const mass_ts_1 = require("./converters/mass.js");
+Object.defineProperty(exports, "Kilogram", { enumerable: true, get: function () { return mass_ts_1.Kilogram; } });
+Object.defineProperty(exports, "Gram", { enumerable: true, get: function () { return mass_ts_1.Gram; } });
+Object.defineProperty(exports, "Ton", { enumerable: true, get: function () { return mass_ts_1.Ton; } });
+Object.defineProperty(exports, "Milligram", { enumerable: true, get: function () { return mass_ts_1.Milligram; } });
+Object.defineProperty(exports, "Microgram", { enumerable: true, get: function () { return mass_ts_1.Microgram; } });
+Object.defineProperty(exports, "Pound", { enumerable: true, get: function () { return mass_ts_1.Pound; } });
+Object.defineProperty(exports, "Stone", { enumerable: true, get: function () { return mass_ts_1.Stone; } });
+Object.defineProperty(exports, "Ounce", { enumerable: true, get: function () { return mass_ts_1.Ounce; } });
 //# sourceMappingURL=convert.js.map
