@@ -4,3 +4,4 @@ src/
 minify.js
 tsconfig.json
 node_modules/
+./.github/
