@@ -1,68 +1,89 @@
 # unit-convert-Intl
-Libreria que contiene un conjunto de herramientas para la conversion de unidades, Mediante la  **[Api Intl](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Intl)**
+Librería que contiene un conjunto de herramientas para la conversión de unidades, mediante la **[API Intl](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Intl)**.
 
-Unit-Convert-Intl es una librería simple y eficiente que te permite realizar conversiones entre diversas unidades de medida. Con esta herramienta podrás convertir distancias entre unidades comunes como yardas, millas, kilómetros, centímetros e inches de manera sencilla y directa.
+Unit-Convert-Intl es una librería simple y eficiente que te permite realizar conversiones entre diversas unidades de medida. Con esta herramienta podrás convertir distancias, masas y ahora volúmenes entre unidades comunes de manera sencilla y directa.
 
-## Versión 1.0.4
-La versión 1.0.4 incluye funciones para realizar conversiones de distancia. 
+---
+
+## Novedades en la versión 1.2.0
+**¡Nuevo!** Esta versión introduce soporte para la conversión de unidades de volumenes. Ahora puedes trabajar con unidades como:
+
+- **Cubic Meter** («metro cúbico»)
+- **Pint** («pinta»)
+- **Cup** («taza»)
+- **Tablespoon** («cucharada»)
+
+Estas nuevas funciones permiten realizar conversiones precisas y personalizadas, adaptándose al formato y configuración regional del usuario.
+
+Ejemplo de uso:
+
+```typescript
+import { CubicMeter, Pint, Cup, Tablespoon } from 'unit-convert-Intl';
+
+// Convertir metros cúbicos a litros
+const litersFromCubicMeter = CubicMeter.toLiter(2, { locale: 'es-ES', unitDisplay: 'long' });
+console.log(`${2} metros cúbicos son ${litersFromCubicMeter}`);
+
+// Convertir pintas a mililitros
+const millilitersFromPint = Pint.toMilliliter(3);
+console.log(`${3} pintas son ${millilitersFromPint} mililitros`);
+
+// Convertir tazas a cucharadas
+const tablespoonsFromCup = Cup.toTablespoon(1);
+console.log(`1 taza son ${tablespoonsFromCup} cucharadas`);
+```
+
+---
 
 ## Versión 1.1.0
-La versión 1.1.0 incluye funciones para realizar conversiones de Masas a parte de las de conversion de Distancia de la versión posterior.
-- Kilogram 
-- Gram
-- Ton
-- Milligram
-- Microgram
-- Pound
-- Stone 
-- Ounce
+La versión 1.1.0 incluye funciones para realizar conversiones de masas además de las de distancia presentes en versiones anteriores:
+
+- **Kilogram**
+- **Gram**
+- **Ton**
+- **Milligram**
+- **Microgram**
+- **Pound**
+- **Stone**
+- **Ounce**
+
+## Versión 1.0.4
+La versión 1.0.4 incluye funciones para realizar conversiones de distancia:
+
+- **Yard**
+- **Mile**
+- **Kilometer**
+- **Centimeter**
+- **Inch**
 
 ### Instalación
- Para instalar la librería, usa npm:
+Para instalar la librería, usa npm:
 
 ```bash
 npm install unit-convert-Intl
 ```
-### Uso
-A continuación se muestra cómo usar las funciones de conversión:
+
+### Uso General
+A continuación se muestra un ejemplo general del uso de las funciones de conversión:
 
 ```typescript
-import { Yard, Mile, Kilometer, Centimeter, Inch } from 'unit-converter-Intl';
+import { Yard, Kilometer, Gram } from 'unit-convert-Intl';
 
 // Convertir Yardas a metros
-const metersFromYard = Yard.toMeter(5, {locale : 'es-ES', unitDisplay : 'long'});
-console.log(`${5} yardas son ${metersFromYard}`);//  5 yardas son 4.572 metros
+const metersFromYard = Yard.toMeter(5, { locale: 'es-ES', unitDisplay: 'long' });
+console.log(`${5} yardas son ${metersFromYard}`);
 
 // Convertir Millas a kilómetros
-const kilometersFromMile = Mile.toKilometer(3);
-console.log(`${3} millas son ${kilometersFromMile} kilómetros`);
+const kilometersFromMile = Kilometer.toMile(3);
+console.log(`${3} kilómetros son ${kilometersFromMile} millas`);
 
-// Convertir Centímetros a pulgadas
-const inchesFromCentimeter = Centimeter.toInch(100);
-console.log(`${100} centímetros son ${inchesFromCentimeter} pulgadas`);
+// Convertir gramos a kilogramos
+const kilogramsFromGram = Gram.toKilogram(1000);
+console.log(`${1000} gramos son ${kilogramsFromGram} kilogramos`);
 ```
-### Algunos Métodos disponibles son: 
-- Yardas
-	- toMeter(value: number): Convierte yardas a metros.
-	- toKilometer(value: number): Convierte yardas a kilómetros.
-	- toMile(value: number): Convierte yardas a millas.
-	- toYard(value: number): Retorna el valor en yardas (sin conversión).
-	- toFoot(value: number): Convierte yardas a pies.
-	- toCentimeter(value: number): Convierte yardas a centímetros.
-	- toInch(value: number): Convierte yardas a pulgadas.
-- Millas
-	- toMeter(value: number): Convierte millas a metros.
-	- toKilometer(value: number): Convierte millas a kilómetros.
-	- toMile(value: number): Retorna el valor en millas (sin conversión).
-	- toYard(value: number): Convierte millas a yardas.
-	- toFoot(value: number): Convierte millas a pies.
-	- toCentimeter(value: number): Convierte millas a centímetros.
-	- toInch(value: number): Convierte millas a pulgadas.
-
 
 ### Contribución
 Si deseas contribuir al proyecto, por favor abre un "issue" o "pull request" con tus cambios o sugerencias. ¡Tu ayuda será bienvenida!
 
-#### Licencia
+### Licencia
 Este proyecto está bajo la MIT License. Consulta el archivo LICENSE para más detalles.
-
