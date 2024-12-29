@@ -2,7 +2,6 @@
 const { assert } = require("chai");
 const { describe, it } = require("mocha");
 import { Kilogram, Gram, Ton, Milligram, Microgram, Pound, Stone, Ounce } from '../dist/convert';
-import { unitDisplay } from '../dist/converters/utils';
 
 describe('Mass', () => {
 	describe('Kilogram', () => {

@@ -2,7 +2,6 @@
 const { assert } = require("chai");
 const { describe, it } = require("mocha");
 import { FluidOunce, Gallon, Liter, Milliliter, CubicMeter, Pint, Tablespoon, Cup } from '../dist/convert';
-import { unitDisplay } from '../dist/converters/utils';
 
 describe('Volume', () => {
 	describe('FluidOunce', () => {

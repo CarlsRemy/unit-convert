@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Cup = exports.Tablespoon = exports.Pint = exports.CubicMeter = exports.Milliliter = exports.Liter = exports.Gallon = exports.FluidOunce = exports.Ounce = exports.Stone = exports.Pound = exports.Microgram = exports.Milligram = exports.Ton = exports.Gram = exports.Kilogram = exports.Foot = exports.Yard = exports.Mile = exports.Kilometer = exports.Meter = exports.Centimeter = exports.Inch = void 0;
+exports.MeterPerSecond = exports.MeterPerMinute = exports.MeterPerHour = exports.MeterPerDay = exports.KilometerPerSecond = exports.KilometerPerMinute = exports.KilometerPerHour = exports.KilometerPerDay = exports.Cup = exports.Tablespoon = exports.Pint = exports.CubicMeter = exports.Milliliter = exports.Liter = exports.Gallon = exports.FluidOunce = exports.Ounce = exports.Stone = exports.Pound = exports.Microgram = exports.Milligram = exports.Ton = exports.Gram = exports.Kilogram = exports.Foot = exports.Yard = exports.Mile = exports.Kilometer = exports.Meter = exports.Centimeter = exports.Inch = void 0;
 const distance_ts_1 = require("./converters/distance.js");
 Object.defineProperty(exports, "Inch", { enumerable: true, get: function () { return distance_ts_1.Inch; } });
 Object.defineProperty(exports, "Centimeter", { enumerable: true, get: function () { return distance_ts_1.Centimeter; } });
@@ -27,4 +27,13 @@ Object.defineProperty(exports, "CubicMeter", { enumerable: true, get: function (
 Object.defineProperty(exports, "Pint", { enumerable: true, get: function () { return volume_ts_1.Pint; } });
 Object.defineProperty(exports, "Tablespoon", { enumerable: true, get: function () { return volume_ts_1.Tablespoon; } });
 Object.defineProperty(exports, "Cup", { enumerable: true, get: function () { return volume_ts_1.Cup; } });
+const speed_ts_1 = require("./converters/speed.js");
+Object.defineProperty(exports, "KilometerPerDay", { enumerable: true, get: function () { return speed_ts_1.KilometerPerDay; } });
+Object.defineProperty(exports, "KilometerPerHour", { enumerable: true, get: function () { return speed_ts_1.KilometerPerHour; } });
+Object.defineProperty(exports, "KilometerPerMinute", { enumerable: true, get: function () { return speed_ts_1.KilometerPerMinute; } });
+Object.defineProperty(exports, "KilometerPerSecond", { enumerable: true, get: function () { return speed_ts_1.KilometerPerSecond; } });
+Object.defineProperty(exports, "MeterPerDay", { enumerable: true, get: function () { return speed_ts_1.MeterPerDay; } });
+Object.defineProperty(exports, "MeterPerHour", { enumerable: true, get: function () { return speed_ts_1.MeterPerHour; } });
+Object.defineProperty(exports, "MeterPerMinute", { enumerable: true, get: function () { return speed_ts_1.MeterPerMinute; } });
+Object.defineProperty(exports, "MeterPerSecond", { enumerable: true, get: function () { return speed_ts_1.MeterPerSecond; } });
 //# sourceMappingURL=convert.js.map

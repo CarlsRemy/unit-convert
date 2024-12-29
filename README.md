@@ -3,37 +3,37 @@ Librería que contiene un conjunto de herramientas para la conversión de unidad
 
 Unit-Convert-Intl es una librería simple y eficiente que te permite realizar conversiones entre diversas unidades de medida. Con esta herramienta podrás convertir distancias, masas y ahora volúmenes entre unidades comunes de manera sencilla y directa.
 
----
+## Novedades en la versión 1.3.0
+**¡Nuevo!** Esta versión introduce soporte para la conversión de unidades de velocidad. Ahora puedes trabajar con unidades como:
 
-## Novedades en la versión 1.2.0
-**¡Nuevo!** Esta versión introduce soporte para la conversión de unidades de volumenes. Ahora puedes trabajar con unidades como:
+- **KilometerPerHour**
+- **MeterPerHour**
+- **MeterPerSecond**
 
-- **Cubic Meter** («metro cúbico»)
-- **Pint** («pinta»)
-- **Cup** («taza»)
-- **Tablespoon** («cucharada»)
 
 Estas nuevas funciones permiten realizar conversiones precisas y personalizadas, adaptándose al formato y configuración regional del usuario.
 
 Ejemplo de uso:
 
 ```typescript
-import { CubicMeter, Pint, Cup, Tablespoon } from 'unit-convert-Intl';
+import { KilometerPerHour, KilometerPerDay } from 'unit-convert-Intl';
 
-// Convertir metros cúbicos a litros
-const litersFromCubicMeter = CubicMeter.toLiter(2, { locale: 'es-ES', unitDisplay: 'long' });
-console.log(`${2} metros cúbicos son ${litersFromCubicMeter}`);
+// Convertir KM/Hs  a M/Hs
+const MeterPerHour = KilometerPerHour.MeterPerHour(2, { locale: 'es-ES', unitDisplay: 'long' });
+console.log(`${2} Kilometros por hora cúbicos son ${MeterPerHour}`);
 
-// Convertir pintas a mililitros
-const millilitersFromPint = Pint.toMilliliter(3);
-console.log(`${3} pintas son ${millilitersFromPint} mililitros`);
-
-// Convertir tazas a cucharadas
-const tablespoonsFromCup = Cup.toTablespoon(1);
-console.log(`1 taza son ${tablespoonsFromCup} cucharadas`);
+// Convertir KM/Ds a M/Mins
+const MeterPerMinute = KilometerPerDay.toMeterPerMinute(3);
+console.log(`${3} KM/Ds son ${millilitersFromPint} metros por minuto`);
 ```
 
----
+## Versión 1.2.0
+Esta versión introduce soporte para la conversión de unidades de volumenes. Ahora puedes trabajar con unidades como:
+
+- **Cubic Meter** («metro cúbico»)
+- **Pint** («pinta»)
+- **Cup** («taza»)
+- **Tablespoon** («cucharada»)
 
 ## Versión 1.1.0
 La versión 1.1.0 incluye funciones para realizar conversiones de masas además de las de distancia presentes en versiones anteriores:
