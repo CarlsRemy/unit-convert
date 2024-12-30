@@ -7,7 +7,6 @@
  * @param Options - The options to convert
  * @returns The converted value
 */
-import { Kilometer } from './distance.ts';
 import { IOptions,  _convert } from './utils.ts'; 
 
 interface IKilometerPerDay {

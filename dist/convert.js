@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.MeterPerSecond = exports.MeterPerMinute = exports.MeterPerHour = exports.MeterPerDay = exports.KilometerPerSecond = exports.KilometerPerMinute = exports.KilometerPerHour = exports.KilometerPerDay = exports.Cup = exports.Tablespoon = exports.Pint = exports.CubicMeter = exports.Milliliter = exports.Liter = exports.Gallon = exports.FluidOunce = exports.Ounce = exports.Stone = exports.Pound = exports.Microgram = exports.Milligram = exports.Ton = exports.Gram = exports.Kilogram = exports.Foot = exports.Yard = exports.Mile = exports.Kilometer = exports.Meter = exports.Centimeter = exports.Inch = void 0;
+exports.Celsius = exports.Fahrenheit = exports.kelvin = exports.MeterPerSecond = exports.MeterPerMinute = exports.MeterPerHour = exports.MeterPerDay = exports.KilometerPerSecond = exports.KilometerPerMinute = exports.KilometerPerHour = exports.KilometerPerDay = exports.Cup = exports.Tablespoon = exports.Pint = exports.CubicMeter = exports.Milliliter = exports.Liter = exports.Gallon = exports.FluidOunce = exports.Ounce = exports.Stone = exports.Pound = exports.Microgram = exports.Milligram = exports.Ton = exports.Gram = exports.Kilogram = exports.Foot = exports.Yard = exports.Mile = exports.Kilometer = exports.Meter = exports.Centimeter = exports.Inch = void 0;
 const distance_ts_1 = require("./converters/distance.js");
 Object.defineProperty(exports, "Inch", { enumerable: true, get: function () { return distance_ts_1.Inch; } });
 Object.defineProperty(exports, "Centimeter", { enumerable: true, get: function () { return distance_ts_1.Centimeter; } });
@@ -27,6 +27,10 @@ Object.defineProperty(exports, "CubicMeter", { enumerable: true, get: function (
 Object.defineProperty(exports, "Pint", { enumerable: true, get: function () { return volume_ts_1.Pint; } });
 Object.defineProperty(exports, "Tablespoon", { enumerable: true, get: function () { return volume_ts_1.Tablespoon; } });
 Object.defineProperty(exports, "Cup", { enumerable: true, get: function () { return volume_ts_1.Cup; } });
+const temperature_ts_1 = require("./converters/temperature.js");
+Object.defineProperty(exports, "kelvin", { enumerable: true, get: function () { return temperature_ts_1.kelvin; } });
+Object.defineProperty(exports, "Fahrenheit", { enumerable: true, get: function () { return temperature_ts_1.Fahrenheit; } });
+Object.defineProperty(exports, "Celsius", { enumerable: true, get: function () { return temperature_ts_1.Celsius; } });
 const speed_ts_1 = require("./converters/speed.js");
 Object.defineProperty(exports, "KilometerPerDay", { enumerable: true, get: function () { return speed_ts_1.KilometerPerDay; } });
 Object.defineProperty(exports, "KilometerPerHour", { enumerable: true, get: function () { return speed_ts_1.KilometerPerHour; } });

@@ -1,6 +1,15 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.MeterPerSecond = exports.MeterPerMinute = exports.MeterPerHour = exports.MeterPerDay = exports.KilometerPerSecond = exports.KilometerPerMinute = exports.KilometerPerHour = exports.KilometerPerDay = void 0;
+/**
+ * Convert a unit to another unit
+ * Speed units measurements
+ * @author Carlos Ismael .Y .R
+ *
+ * @param value - The value to convert
+ * @param Options - The options to convert
+ * @returns The converted value
+*/
 const utils_ts_1 = require("./utils.js");
 const KilometerPerDay = {
     toMeterPerDay(value = 0, options = {}) {
