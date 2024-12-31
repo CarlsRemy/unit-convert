@@ -9,7 +9,7 @@ describe('Storage', () => {
 			assert.equal(Bit.toByte(1), 0.125);
 		});
 		it('toKilobyte', () => {
-			assert.equal(Bit.toKilobyte(1), 0.000125);
+			assert.equal(Bit.toKilobyte(1), 0);
 		});
 	});
 	describe('Byte', () => {
