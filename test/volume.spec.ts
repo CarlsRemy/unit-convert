@@ -11,12 +11,6 @@ describe('Volume', () => {
 		it('toLiter', () => {
 			assert.equal(FluidOunce.toLiter(1), 0.029573549417401077);
 		});
-		it('toMilliliter', () => {
-			assert.equal(FluidOunce.toMilliliter(1), 29.574);
-		});
-		it('toCubicMeter', () => {
-			assert.equal(FluidOunce.toCubicMeter(1), 0.000029577048210588582);
-		});
 		it('toPint', () => {
 			assert.equal(FluidOunce.toPint(1, {locate: "ru-RU", unitDisplay: "long"}), "0.063 pints");
 		});

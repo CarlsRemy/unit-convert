@@ -3,29 +3,26 @@ Librería que contiene un conjunto de herramientas para la conversión de unidad
 
 Unit-Convert-Intl es una librería simple y eficiente que te permite realizar conversiones entre diversas unidades de medida. Con esta herramienta podrás convertir distancias, masas y ahora volúmenes entre unidades comunes de manera sencilla y directa.
 
-## Novedades en la versión 1.3.0
-**¡Nuevo!** Esta versión introduce soporte para la conversión de unidades de velocidad. Ahora puedes trabajar con unidades como:
+## Novedades en la versión 1.5.0
+**¡Nuevo!** Esta versión introduce soporte para la conversión de unidades de Almacenamiento **en Base 10**. Ahora puedes trabajar con unidades como:
+- **Bit**
+- **Megabyte**
+- **Terabyte**
+
+Estas nuevas funciones permiten realizar conversiones precisas y personalizadas, adaptándose al formato y configuración regional del usuario.
+
+## Versión 1.4.0
+Esta versión introduce soporte para la conversión de unidades de Temperatura.
+- **Kelvin**
+- **Fharenheit**
+- **Celsius**
+
+## Versión 1.3.0
+Esta versión introduce soporte para la conversión de unidades de velocidad. Ahora puedes trabajar con unidades como:
 
 - **KilometerPerHour**
 - **MeterPerHour**
 - **MeterPerSecond**
-
-
-Estas nuevas funciones permiten realizar conversiones precisas y personalizadas, adaptándose al formato y configuración regional del usuario.
-
-Ejemplo de uso:
-
-```typescript
-import { KilometerPerHour, KilometerPerDay } from 'unit-convert-Intl';
-
-// Convertir KM/Hs  a M/Hs
-const MeterPerHour = KilometerPerHour.MeterPerHour(2, { locale: 'es-ES', unitDisplay: 'long' });
-console.log(`${2} Kilometros por hora cúbicos son ${MeterPerHour}`);
-
-// Convertir KM/Ds a M/Mins
-const MeterPerMinute = KilometerPerDay.toMeterPerMinute(3);
-console.log(`${3} KM/Ds son ${millilitersFromPint} metros por minuto`);
-```
 
 ## Versión 1.2.0
 Esta versión introduce soporte para la conversión de unidades de volumenes. Ahora puedes trabajar con unidades como:

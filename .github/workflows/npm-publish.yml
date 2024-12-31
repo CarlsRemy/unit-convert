@@ -29,8 +29,27 @@ jobs:
     - name: Run tests
       run: npm test  # Si tienes pruebas configuradas, de lo contrario omítelo
 
-    # Paso 5: Publicar en npm
+    # Paso 5: Determinar el incremento de versión
+    - name: Determine version bump
+      id: version
+      run: |
+        npx standard-version --dry-run
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    # Paso 6: Publicar en npm
     - name: Publish to npm
       run: npm publish
       env:
         NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}} 
+
+    # Paso 7: Hacer commit de la nueva versión
+    - name: Commit and push version bump
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        git add package.json CHANGELOG.md
+        git commit -m "chore: release new version"
+        git push --follow-tags
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
