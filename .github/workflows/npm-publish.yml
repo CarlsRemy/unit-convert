@@ -37,18 +37,19 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
-
     # Paso 6: Hacer commit de la nueva versión
     - name: Commit changes
       run: |
         git add .
         git commit -m "chore(release): release version $(cat package.json | jq -r '.version')"
 
+    # Paso 7: Push de los cambios y tags
     - name: Push changes and tags
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
      
-    # Paso 7: Publicar en npm
+    # Paso 8: Publicar en npm
     - name: Publish to npm
       run: npm publish
       env:
