@@ -36,14 +36,9 @@ jobs:
         npx standard-version --dry-run
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
 
-    # Paso 6: Publicar en npm
-    - name: Publish to npm
-      run: npm publish
-      env:
-        NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}} 
-
-    # Paso 7: Hacer commit de la nueva versión
+    # Paso 6: Hacer commit de la nueva versión
     - name: Commit and push version bump
       run: |
         git config user.name "github-actions[bot]"
@@ -53,3 +48,9 @@ jobs:
         git push --follow-tags
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
+    # Paso 7: Publicar en npm
+    - name: Publish to npm
+      run: npm publish
+      env:
+        NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}} 
