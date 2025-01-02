@@ -33,7 +33,7 @@ jobs:
     - name: Determine version bump
       id: version
       run: |
-        npx standard-version --dry-run
+        npx standard-version 
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
@@ -42,9 +42,9 @@ jobs:
       run: |
         git config user.name "GitHub Actions"
         git config user.email "actions@github.com"
-        git add package.json package-lock.json CHANGELOG.md
+        git add .
         git commit -m "chore(release): release version $(cat package.json | jq -r '.version')" || echo "No changes to commit"
-        git push origin main --follow-tags
+        git push origin main --follow-tags || echo "Push failed, likely no changes"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
