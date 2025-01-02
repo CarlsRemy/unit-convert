@@ -3,8 +3,14 @@ Librería que contiene un conjunto de herramientas para la conversión de unidad
 
 Unit-Convert-Intl es una librería simple y eficiente que te permite realizar conversiones entre diversas unidades de medida. Con esta herramienta podrás convertir distancias, masas y ahora volúmenes entre unidades comunes de manera sencilla y directa.
 
-## Novedades en la versión 1.5.0
-**¡Nuevo!** Esta versión introduce soporte para la conversión de unidades de Almacenamiento **en Base 10**. Ahora puedes trabajar con unidades como:
+## Novedades en la versión 1.6.0
+**¡Nuevo!** Esta versión introduce soporte para la conversión de unidades de Tiempo. Ahora puedes trabajar con unidades como:
+- **Year**
+- **Millisecond**
+- **Minute**
+
+## Versión 1.5.0
+Esta versión introduce soporte para la conversión de unidades de Almacenamiento **en Base 10**. Ahora puedes trabajar con unidades como:
 - **Bit**
 - **Megabyte**
 - **Terabyte**
