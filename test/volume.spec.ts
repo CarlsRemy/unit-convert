@@ -1,4 +1,4 @@
-6350.294971201412// test.ts
+// test.ts
 const { assert } = require("chai");
 const { describe, it } = require("mocha");
 import { FluidOunce, Gallon, Liter, Milliliter, CubicMeter, Pint, Tablespoon, Cup } from '../dist/convert';
